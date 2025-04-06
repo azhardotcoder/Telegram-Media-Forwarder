@@ -1,57 +1,80 @@
-# Telegram Autoforwarder
+# Telegram Media Forwarder
 
-The Telegram Autoforwarder is a Python script that allows you to forward messages from one chat (group or channel) to another based on specified keywords. It works with both groups and channels, requiring only the necessary permissions to access the messages.
+A powerful GUI application for forwarding messages and media between Telegram channels, groups, and chats.
 
 ## Features
 
-- Forward messages containing specific keywords from one chat to another.
-- Works with both groups and channels.
-- Simple setup and usage.
+- 🖼️ Modern and intuitive PyQt5-based user interface
+- 🔄 Forward messages between any Telegram chats, channels, or groups
+- 📁 Support for all types of media (photos, videos, documents, etc.)
+- ⚡ Asynchronous operation for better performance
+- 🔍 Advanced filtering options
+- 💾 Session management for quick reconnection
+- 📊 Progress tracking and status updates
 
-## How it Works
+## Prerequisites
 
-The script uses the Telethon library to interact with the Telegram API. You provide the script with your Telegram API ID, API hash, and phone number for authentication. Then, you can choose to list all chats you're a part of and select the ones you want to use for forwarding messages. Once configured, the script continuously checks for messages in the specified source chat and forwards them to the destination chat if they contain any of the specified keywords.
+- Python 3.7 or higher
+- Telegram API credentials (api_id and api_hash)
 
-## Keywords
-
-You can specify one or more keywords that, if found in a message, trigger the forwarding process. Keywords are case-insensitive and can be specified during setup.
-
-## Setup and Usage
+## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/redianmarku/Telegram-Autoforwarder.git
-   cd Telegram-Autoforwarder
+   git clone https://github.com/azhardotcoder/Telegram-Media-Forwarder.git
+   cd Telegram-Media-Forwarder
    ```
 
-2. Install the required dependencies:
+2. Install required dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Configure the script:
+3. Get your Telegram API credentials:
+   - Go to https://my.telegram.org/auth
+   - Log in with your phone number
+   - Go to 'API development tools'
+   - Create a new application
+   - Copy your api_id and api_hash
 
-   - Open `TelegramForwarder.py` file and provide your Telegram API ID, API hash, and phone number in the appropriate variables.
-   - Modify other settings as needed directly in the script.
+## Usage
 
-4. Run the script:
+1. Run the application:
 
    ```bash
-   python TelegramForwarder.py
+   python telegram_forwarder_ui_v2.py
    ```
 
-5. Choose an option:
-   - List Chats: View a list of all chats you're a part of and select the ones to use for message forwarding.
-   - Forward Messages: Enter the source chat ID, destination chat ID, and keywords to start forwarding messages.
+2. First-time setup:
+   - Enter your Telegram API credentials
+   - Enter your phone number
+   - Enter the verification code sent to your Telegram account
 
-## Notes
+3. Forward messages:
+   - Select source and destination chats
+   - Configure filtering options (if needed)
+   - Click "Start Forwarding"
 
-- Remember to keep your API credentials secure and do not share them publicly.
-- Ensure that you have the necessary permissions to access messages in the chats you want to use.
-- Adjust the script's behavior and settings according to your requirements.
+## Security Notes
+
+- Never share your Telegram API credentials
+- The application stores session files locally for convenience
+- Logout when you're done to clear sensitive data
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Disclaimer
+
+This tool is for educational purposes only. Please respect Telegram's terms of service and don't use this tool for spam or abuse.
+
+## Support
+
+If you encounter any issues or have questions, please open an issue on GitHub.

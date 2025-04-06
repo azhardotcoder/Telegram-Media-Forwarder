@@ -1,1 +1,3 @@
-telethon
+PyQt5==5.15.9
+Telethon==1.28.5
+asyncio==3.4.3
